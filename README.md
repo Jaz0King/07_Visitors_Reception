@@ -2,9 +2,9 @@
 
 Central de recepción de visitantes construida con JavaScript, HTML, CSS y Firebase.
 
-El registro de visitantes en un imueble o evento contribuye a consolidar diversos protocolos de seguridad que promuevan la confidencialidad de la información que en el mismo se puedan compartir y sobretodo, para resguardar el bienestar de quienes lo utilizan, esto incluye a la prevención de propagación de enfermedades junto con los protocolos de sanidad que la administración del recinto acuerde con el ingreso de sus visitantes.
+El registro de visitantes en un imueble o evento contribuye a consolidar diversos protocolos de seguridad que promuevan la confidencialidad de la información que en el mismo se puedan compartir y sobretodo, para resguardar el bienestar de quienes lo utilizan, esto incluye mejorar las medidas de emergencia en caso de sismo y/ o incendio y desarrollar mejoras en la prevención de la propagación de enfermedades junto con los protocolos de sanidad que la administración del recinto acuerde con el ingreso de sus visitantes.
 
-Al mismo tiempo, el registro de los datos de la gente que ingresa al inmueble facilita tener un control de su información y con ello coadyuvar a la gestión y toma de desiciones que los directivos consideren pertinente en el devenir de su funcionalidad.
+El registro de los datos de la gente que ingresa al inmueble facilita tener un control de su información y con ello coadyuvar a la gestión y toma de desiciones que los directivos consideren pertinente en el devenir de su funcionalidad.
 
 Por ello se ha diseñado esta aplicación web que facilita la dministración, registro de cada ingreso y salida de sus visitantes, con la información de contacto personal y una foto de su rostro, el motivo y las personas u oficina que visita, así como permitir a los administradores ver las personas registradas actualmente, realizar consultas analíticas básicas de la misma, incluyendo cuánta gente ha ingresado durante los últimos días, entre otros números específicos. Esta aplicación se compromete a ser ecofriendly al permitir ahorrar grandes cantidades de papel y muy práctica al poder utilizarse desde un dispositivo tecnológico de información tal como una Tablet situada en el lobby del recinto.
 
@@ -16,7 +16,7 @@ Aplicación web para tableta para registro digital de visitantes en la entrada d
 
 - Usuario 1: Visitantes del edificio coworking Torre Insurgentes Sur
 
-- Usuario 2: administradores de recepción del edificio de coworking Insurgentes Surgit , conserje
+- Usuario 2: administradores de recepción del edificio de coworking Torre Insurgentes Surgit, conserje
 
 ## 3. User Stories
 
@@ -55,6 +55,10 @@ La interfaz debe permitir a los visitantes:
   - Muestra cuántos visitantes se han registrado durante el día.
 
   - Poder añadir una marca de los visitantes que han abandonado el edificio como "Fecha de salida" y la fecha de salida.
+
+  ## 4. Diagrama de flujo
+
+  ## 5. Maquetado
 
 La _plantilla_ contiene una estructura de archivo como este:
 
