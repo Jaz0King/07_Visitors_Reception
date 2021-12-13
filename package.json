@@ -1,0 +1,23 @@
+{
+  "name": "07_visitors_reception",
+  "version": "1.0.0",
+  "description": "Visitors Reception central built with JavaScript, HTML, CSS and Firebase.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.4.1"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaz0King/07_Visitors_Reception.git"
+  },
+  "author": "Jaziel Ramírez Y Oscar Ruiz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jaz0King/07_Visitors_Reception/issues"
+  },
+  "homepage": "https://github.com/Jaz0King/07_Visitors_Reception#readme"
+}
