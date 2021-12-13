@@ -4,19 +4,19 @@ Central de recepción de visitantes construida con JavaScript, HTML, CSS y Fireb
 
 El registro de visitantes en un imueble o evento contribuye a consolidar diversos protocolos de seguridad que promuevan la confidencialidad de la información que en el mismo se puedan compartir y sobretodo, para resguardar el bienestar de quienes lo utilizan, esto incluye a la prevención de propagación de enfermedades junto con los protocolos de sanidad que la administración del recinto acuerde con el ingreso de sus visitantes.
 
-Al mismo tiempo, el registro de los datos de la gente que ingresa al inmueble facilita tener un control de su información y con ello coadyuvar a la gestión y toma de desiciones que la administración considere pertinente en el devenir de su funcionalidad.
+Al mismo tiempo, el registro de los datos de la gente que ingresa al inmueble facilita tener un control de su información y con ello coadyuvar a la gestión y toma de desiciones que los directivos consideren pertinente en el devenir de su funcionalidad.
 
 Por ello se ha diseñado esta aplicación web que facilita la dministración, registro de cada ingreso y salida de sus visitantes, con la información de contacto personal y una foto de su rostro, el motivo y las personas u oficina que visita, así como permitir a los administradores ver las personas registradas actualmente, realizar consultas analíticas básicas de la misma, incluyendo cuánta gente ha ingresado durante los últimos días, entre otros números específicos. Esta aplicación se compromete a ser ecofriendly al permitir ahorrar grandes cantidades de papel y muy práctica al poder utilizarse desde un dispositivo tecnológico de información tal como una Tablet situada en el lobby del recinto.
 
 ## 1. Descripción
 
-Aplicación web para tableta para registro digital de visitantes en la entrada de un edificio de coworking de 8 pisos, cada piso con 2 oficinas, cada oficina tiene al menos un trabajador base. La aplicación web también tiene una vista de administrador privada, para ver los registros actuales del día y los números importantes como cuántos registros durante el mes, la semana y el día. También las oficinas con más visitantes y la lista completa de visitantes totales.
+Aplicación web para tableta para registro digital de visitantes en la entrada del edificio coworking "Torre Insurgentes Sur" el cual cuenta con 8 pisos, cada piso con 2 oficinas, cada oficina tiene al menos un trabajador base. La aplicación web también tiene una vista de administrador privada, para ver los registros actuales del día y los números importantes como cuántos registros durante el mes, la semana y el día. También las oficinas con más visitantes y la lista completa de visitantes totales.
 
 ## 2. Definición de usuario
 
-- Usuario 1: Visitantes del edificio de coworkin
+- Usuario 1: Visitantes del edificio coworking Torre Insurgentes Sur
 
-- Usuario 2: administradores de recepción del edificio de coworking, conserje
+- Usuario 2: administradores de recepción del edificio de coworking Insurgentes Surgit , conserje
 
 ## 3. User Stories
 
