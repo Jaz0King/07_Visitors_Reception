@@ -56,9 +56,11 @@ La interfaz debe permitir a los visitantes:
 
   - Poder añadir una marca de los visitantes que han abandonado el edificio como "Fecha de salida" y la fecha de salida.
 
-  ## 4. Diagrama de flujo
+## 4. Diagrama de flujo
 
-  ## 5. Maquetado
+![Diagrama de Flujo](./assets/IMG/DiagramaDeFlujo.jpg)
+
+## 5. Maquetado
 
 La _plantilla_ contiene una estructura de archivo como este:
 
