@@ -3,12 +3,57 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Torre Insurgentes Registro</title>
+        <title>Torre Insurgentes Sur Registro</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="RegistroVisit.css">   
         <script src="" async defer></script>
-    <body>
+    <body onload="startTime()">
+        <main>
+            <header id="titulo">
+                <h1><center>Torre Insurgentes Sur</center></h1>
+            </header>
+            <section id="registro">
+                <center>
+                <h2>Registro de visitantes</h2>
+                <label for="name">Nombre: </label><input type="text" id="name" required placeholder="Nombre(s)">
+                <label for="lastName">Apellido: </label><input type="text" id="lastName" required placeholder="Primer apellido"><br><hr>
+                <p>Ingrese su correo electronico y/o un número telefónico</p>
+                <label for="numberCall">Teléfono: </label><input type="tel" id="numberCall" placeholder="8 dígitos">
+                <label for="eMail">E-mail: </label><input type="mail" id="eMail" placeholder="usuario@ejemplo.com"><br><hr><br>
+                <label for="dropdown">Empresa / oficina a la que visita: </label><br>
+                <select name="floor" class="form-control" id="dropdown" required>
+                    <option disabled selected value>---> Seleccione la opción correcta</option>
+                    <option value="janitor">Planta baja / administración</option>
+                    <option value="floor1">Piso 1</option>
+                    <option value="floor2">Piso 2</option>
+                    <option value="floor3">Piso 3</option>
+                    <option value="floor4">Piso 4</option>
+                    <option value="floor5">Piso 5</option>
+                    <option value="floor6">Piso 6</option>
+                    <option value="floor7">Piso 7</option>
+                    <option value="floor8">Piso 8</option>
+                </select><br><br>
+                <label for="person">Persona a la que visita: </label><input type="text" id="person" placeholder="Nombre del personal" required>
+                <label for="reason">Motivo de su visita: </label><input type="text" id="reason" placeholder="Escriba brevemente su motivo" required><br>
+                <p>¿Cuenta con una cita o desea anunciarse?</p>
+                <label><input name="date" value="cita" type="radio" class="input-radio" cheked>Tengo cita</label>
+                <label><input name="date" value="sin cita" type="radio" class="input-radio" >Deseo anunciarme</label><br><hr><br>
+                <input type="button" id="register" value="Registar visita"><br><br>
+                </center>
+            </section>
+            <aside id="foto">
+                <center>
+                    <div id="clockdate">
+                        <div class="clockdate-wrapper">
+                            <div id="clock"></div>
+                            <div id="date"></div>
+                        </div>
+                    </div>
+                    <img src="https://w7.pngwing.com/pngs/896/922/png-transparent-computer-icons-user-profile-profile-miscellaneous-angle-white.png" alt="visitante">
+                </center>
+            </aside>
+        </main>
+        <script src="index.js"></script>
     </body>
-    
 </html>

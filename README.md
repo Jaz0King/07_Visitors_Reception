@@ -30,7 +30,7 @@ La interfaz debe permitir a los visitantes:
 
   - Empresa u oficina que visita
 
-  - Personas que visitan
+  - Persona que visita
 
   - Razón para visitar
 
@@ -60,18 +60,14 @@ La interfaz debe permitir a los visitantes:
 
 ![Diagrama de Flujo](./assets/IMG/DiagramaDeFlujo.jpg)
 
-## 5. Boceto  y Maquetado
+## 5. Boceto y Maquetado
 
 ![Primer pantalla de bienvenida](./assets/IMG/bienvenida.png)
 ![Segunda pantalla registro de visita](./assets/IMG/registro.png)
 ![Tercer pantalla LogIn de Arministrador](./assets/IMG/logIn.png)
 ![Cuarta pantalla visualización de datos, lista de visitas](./assets/IMG/admin.png)
 
-
-
-
-
-### Scripts / Files
+## Scripts Files
 
 - `README.md`: should explain the about of the project, the technology used, the users definitions and the flow chart and prototypes, as well document all the SDLC steps
 - `assets /`: Should contain your assets like images, logos, etc.
@@ -83,11 +79,7 @@ La interfaz debe permitir a los visitantes:
 - `src / admin.js`: here you must implement the web application main functionality to interact with the users.
 - `src / administration.js`: here you must fetch/get the database registrations to show it into the admin view
 
-<<<<<<< HEAD
 ## Expected Learning Outcomes
-=======
-## 7. Expected Learning Outcomes
->>>>>>> 60ec3cad3e5516613b915c18e5fb49ed578999e9
 
 ---
 
