@@ -62,14 +62,18 @@ La interfaz debe permitir a los visitantes:
 
 ## 5. Boceto  y Maquetado
 
-![Primer pantalla de bienvenida](./assets/IMG/bienvenida.png)
+* Primer pantalla: Bienvenida
+![Bienvenida](./assets/IMG/bienvenida.png)
+
+
+* Segunda pantalla: Registro de visitantes
 ![Segunda pantalla registro de visita](./assets/IMG/registro.png)
+
+* Tercer pantalla: LogIn del Administrador
 ![Tercer pantalla LogIn de Arministrador](./assets/IMG/logIn.png)
+
+* Cuarta pantalla: Data-dashboard de visitas
 ![Cuarta pantalla visualización de datos, lista de visitas](./assets/IMG/admin.png)
-
-
-
-
 
 ### Scripts / Files
 
