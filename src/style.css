@@ -13,7 +13,6 @@
     height: 100vh;
     width: 100%;
     gap: 1% 1%;
-   /* grid-template-columns: 1fr 1fr 1fr;*/
     grid-template-rows: Document 1fr 1fr 1fr;
     grid-template-areas:
      "header"
@@ -73,3 +72,5 @@
       font-size: 1.5em;
       border-radius: 5vh;
   }
+
+  

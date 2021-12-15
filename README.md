@@ -87,7 +87,11 @@ La interfaz debe permitir a los visitantes:
 - `src / admin.js`: here you must implement the web application main functionality to interact with the users.
 - `src / administration.js`: here you must fetch/get the database registrations to show it into the admin view
 
+<<<<<<< HEAD
+## Expected Learning Outcomes
+=======
 ## 7. Expected Learning Outcomes
+>>>>>>> 60ec3cad3e5516613b915c18e5fb49ed578999e9
 
 ---
 
