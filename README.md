@@ -60,28 +60,16 @@ La interfaz debe permitir a los visitantes:
 
 ![Diagrama de Flujo](./assets/IMG/DiagramaDeFlujo.jpg)
 
-## 5. Maquetado
+## 5. Boceto  y Maquetado
 
-La _plantilla_ contiene una estructura de archivo como este:
+![Primer pantalla de bienvenida](./assets/IMG/bienvenida.png)
+![Segunda pantalla registro de visita](./assets/IMG/registro.png)
+![Tercer pantalla LogIn de Arministrador](./assets/IMG/logIn.png)
+![Cuarta pantalla visualización de datos, lista de visitas](./assets/IMG/admin.png)
 
-```text
-./
-├── .editorconfig
-├── .eslintrc
-├── .gitignore
-├── README.md
-├── package.json
-├── assets
-├── src
-│   ├── app.js
-│   ├── data.js
-│   ├── index.html
-│   ├── index.js
-│   └── style.css
-└── test
-    ├── app.spec.js
-    └── index.html
-```
+
+
+
 
 ### Scripts / Files
 
@@ -95,7 +83,11 @@ La _plantilla_ contiene una estructura de archivo como este:
 - `src / admin.js`: here you must implement the web application main functionality to interact with the users.
 - `src / administration.js`: here you must fetch/get the database registrations to show it into the admin view
 
+<<<<<<< HEAD
 ## Expected Learning Outcomes
+=======
+## 7. Expected Learning Outcomes
+>>>>>>> 60ec3cad3e5516613b915c18e5fb49ed578999e9
 
 ---
 
