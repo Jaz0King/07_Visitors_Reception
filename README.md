@@ -62,12 +62,19 @@ La interfaz debe permitir a los visitantes:
 
 ## 5. Boceto y Maquetado
 
-![Primer pantalla de bienvenida](./assets/IMG/bienvenida.png)
-![Segunda pantalla registro de visita](./assets/IMG/registro.png)
-![Tercer pantalla LogIn de Arministrador](./assets/IMG/logIn.png)
-![Cuarta pantalla visualización de datos, lista de visitas](./assets/IMG/admin.png)
+- Primer pantalla: Bienvenida
+  ![Bienvenida](./assets/IMG/bienvenida.png)
 
-## Scripts Files
+- Segunda pantalla: Registro de visitantes
+  ![Segunda pantalla registro de visita](./assets/IMG/registro.png)
+
+- Tercer pantalla: LogIn del Administrador
+  ![Tercer pantalla LogIn de Arministrador](./assets/IMG/logIn.png)
+
+- Cuarta pantalla: Data-dashboard de visitas
+  ![Cuarta pantalla visualización de datos, lista de visitas](./assets/IMG/admin.png)
+
+### Scripts / Files
 
 - `README.md`: should explain the about of the project, the technology used, the users definitions and the flow chart and prototypes, as well document all the SDLC steps
 - `assets /`: Should contain your assets like images, logos, etc.

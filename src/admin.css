@@ -1,0 +1,133 @@
+* {
+    margin: 1px;
+    padding: 1px;
+  }
+  
+  body {
+    background-image: url(../assets/IMG/bkg2.png);
+  }
+  
+  main {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    gap: 1% 1%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "header header aside"
+      "alumnos alumnos aside"
+      "alumnos alumnos aside";
+  }
+  
+  header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    margin: 5vh;
+  }
+  
+  h1 {
+    color: rgb(243, 150, 82);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10vh;
+    margin-right: 5vh;
+    font-size: 8vh;
+  }
+  
+  .btn {
+    background-color: rgb(16, 89, 248);
+    margin: 10px;
+  }
+  
+  #button-addon2 {
+    background-color: rgb(16, 89, 248);
+    margin: 0px;
+  }
+  
+  #marcoImagen {
+    width: 50%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+    background-repeat: no-repeat; 
+  }
+  
+  #lock {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  #logoLoc{
+    border-radius: 225px;
+    background-color: transparent;
+  }
+  
+  img {
+    width: 30vh;
+  }
+
+  aside {
+    grid-area: aside;
+    background-color: transparent;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border:rgb(15, 15, 15) 1px solid;
+    color: #fff;
+  }
+  
+  #pieGraph {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #datos {
+    overflow: auto;
+    white-space: nowrap;
+  }
+  
+  #busqueda {
+    position: sticky;
+  }
+  
+  #visitantes {
+    grid-area: alumnos;
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: auto;
+    white-space: nowrap;
+    margin: 2px;
+    border:rgb(15, 15, 15) 1px solid;
+  }
+   
+  footer{
+    grid-area: aside;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+ 
+  
