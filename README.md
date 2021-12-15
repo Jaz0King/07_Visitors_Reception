@@ -95,7 +95,7 @@ La _plantilla_ contiene una estructura de archivo como este:
 - `src / admin.js`: here you must implement the web application main functionality to interact with the users.
 - `src / administration.js`: here you must fetch/get the database registrations to show it into the admin view
 
-## 6. Expected Learning Outcomes
+## Expected Learning Outcomes
 
 ---
 
