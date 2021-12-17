@@ -9,7 +9,7 @@
   }
 
   main {
-    display: grid;
+    
     height: 100vh;
     width: 100%;
     gap: 1% 1%;
@@ -18,7 +18,7 @@
      "header"
      "title "
      "registro"
-     "admin";
+     "formID";
   }
 
   header {
@@ -50,8 +50,8 @@
     flex-direction: column;
   }
 
-  #admin {
-    grid-area: admin;
+  #formID {
+    grid-area: formID;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -59,7 +59,7 @@
 
   h1 {
     color: rgb(243, 150, 82);
-    font-size: 4.5em;
+    font-size: 3.5em;
   }
  
   h5 {
@@ -68,8 +68,14 @@
 
   button {
       height: 7vh;
-      width: 60vh;
+      width: 20vh;
       font-size: 1.5em;
-      border-radius: 5vh;
+      border-radius: 15px;
   }
 
+  input {
+    height: 7h;
+    width: 25vh;
+    font-size: 1.5em;
+    border-radius: 5px;
+  }
