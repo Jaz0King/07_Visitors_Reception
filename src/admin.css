@@ -15,7 +15,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-      "header header aside"
+      "header header header"
       "alumnos alumnos aside"
       "alumnos alumnos aside";
   }
@@ -24,7 +24,7 @@
     grid-area: header;
     display: flex;
     justify-content: center;
-    margin: 5vh;
+    margin: 2vh;
   }
   
   h1 {
