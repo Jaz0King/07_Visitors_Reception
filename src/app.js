@@ -19,4 +19,9 @@ btnComeBack.addEventListener('click', () => {
     window.location.href = "./index.html"
   })
 
+//Se pintan dinamicamente las cards de los visitantes
   
+
+ 
+  
+
