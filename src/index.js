@@ -1,3 +1,5 @@
+//import pendiente
+
 //-----Reloj -----//
 function startTime() {
     var today = new Date(); //Los objetos de fecha se crean con el new Date() constructor (crea un nuevo objeto de fecha con una fecha y hora específicas)
