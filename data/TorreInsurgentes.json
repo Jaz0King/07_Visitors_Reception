@@ -1,7 +1,6 @@
 {
-    "Empresas": [
-        "PB: Administración",
-        {
+    "Empresas": {
+        "PB: Administración" : {
             "Personal":["Juanito Garcia", "Jacinto Hernández", "Ramón Castrejón"],
             "Encargado": "Vania Ramirez",
             "Registro": {
@@ -20,8 +19,7 @@
                 "tiene cita": ""
             }
         },
-        "P1: AeroMex",
-        {
+        "P1: AeroMex S.A.": {
             "Personal":["Rodolfo Valbuena", "Javier Rodriguez", "Romina Saltillo"],
             "Encargado": "Jacito Air",
             "Registro": {
@@ -40,8 +38,7 @@
                 "tiene cita": ""
             }
         },
-        "P2: Medical C.B.D.",
-        {
+        "P2: Gestión Pedagógica S.C.": {
             "Personal":["Pedro Escobar", "Felipe Arellano", "Walter Hartwell"],
             "Encargado": "Oscar Ruiz",
             "Registro": {
@@ -60,7 +57,7 @@
                 "tiene cita": ""
             }
         },
-        "P3: Data Studio Analize S.C.",
+        "P3: Data Studio Analize S.C.":
         {
             "Personal":["José Einstenberg", "Lupita Reynosa", "Noel Clausto"],
             "Encargado": "Alberto Gutierrez",
@@ -80,7 +77,7 @@
                 "tiene cita": ""
             }
         },
-        "P4: Vanguard Marketing México",
+        "P4: Vanguard Marketing México":
         {
             "Personal":["Patricio Cuevas", "Marcos Zuñiga", "Emiliano Mosqueda"],
             "Encargado": "Mónica Macal",
@@ -100,7 +97,7 @@
                 "tiene cita": ""
             }
         },
-        "P5: BTS Army Club S.A.",
+        "P5: BTS Army Club S.A.":
         {
             "Personal":["Jackelyn Chagoya", "Bruno Lee-chun", "Angeles Mulian"],
             "Encargado": "Amanda Ramírez",
@@ -120,7 +117,7 @@
                 "tiene cita": ""
             }
         },
-        "P6: Revista XY",
+        "P6: Revista XY":
         {
             "Personal":["Emiliano Fernández", "Maria James", "Carlos Clentón"],
             "Encargado": "Elías Hernandez",
@@ -140,7 +137,7 @@
                 "tiene cita": ""
             }
         },
-        "P7: El Puerto Agencia de Viajes",
+        "P7: El Puerto, Agencia de Viajes":
         {
             "Personal":["Charlie Duarte", "Tomás Holanda", "Adelina Laureles"],
             "Encargado": "Fernanda Fajardo",
@@ -160,7 +157,7 @@
                 "tiene cita": ""
             }
         },
-        "P8: Bussines Indian-Mex SRL",
+        "P8: Bussines Indian-Mex SRL":
         {
             "Personal":["Khale Ramírez", "Samantha García", "Dalíla Buendía"],
             "Encargado": "Vivek Baraduaj",
@@ -180,5 +177,5 @@
                 "tiene cita": ""
             }
         }        
-    ]
+    }
 }
