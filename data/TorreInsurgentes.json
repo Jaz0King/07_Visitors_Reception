@@ -16,7 +16,8 @@
                     "reunion",
                     "otro"
                 ],
-                "tiene cita": ""
+                "Tiene cita?": "",
+                "Fotografía": ""
             }
         },
         "P1: AeroMex S.A.": {
@@ -35,7 +36,8 @@
                     "reunion",
                     "otro"
                 ],
-                "tiene cita": ""
+                "Tiene cita?": "",
+                "Fotografía": ""
             }
         },
         "P2: Gestión Pedagógica S.C.": {
@@ -54,7 +56,8 @@
                     "reunion",
                     "otro"
                 ],
-                "tiene cita": ""
+                "Tiene cita?": "",
+                "Fotografía": ""
             }
         },
         "P3: Data Studio Analize S.C.":
@@ -74,7 +77,8 @@
                     "reunion",
                     "otro"
                 ],
-                "tiene cita": ""
+                "Tiene cita?": "",
+                "Fotografía": ""
             }
         },
         "P4: Vanguard Marketing México":
@@ -94,7 +98,8 @@
                     "reunion",
                     "otro"
                 ],
-                "tiene cita": ""
+                "Tiene cita?": "",
+                "Fotografía": ""
             }
         },
         "P5: BTS Army Club S.A.":
@@ -114,7 +119,8 @@
                     "reunion",
                     "otro"
                 ],
-                "tiene cita": ""
+                "Tiene cita?": "",
+                "Fotografía": ""
             }
         },
         "P6: Revista XY":
@@ -134,7 +140,8 @@
                     "reunion",
                     "otro"
                 ],
-                "tiene cita": ""
+                "Tiene cita?": "",
+                "Fotografía": ""
             }
         },
         "P7: El Puerto, Agencia de Viajes":
@@ -154,7 +161,8 @@
                     "reunion",
                     "otro"
                 ],
-                "tiene cita": ""
+                "Tiene cita?": "",
+                "Fotografía": ""
             }
         },
         "P8: Bussines Indian-Mex SRL":
@@ -174,7 +182,8 @@
                     "reunion",
                     "otro"
                 ],
-                "tiene cita": ""
+                "Tiene cita?": "",
+                "Fotografía": ""
             }
         }        
     }

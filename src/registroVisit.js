@@ -218,8 +218,6 @@ fetch(registrar)
                 imprimirMotivosVisita.innerHTML += `
                 <option value="${razon}">`
             }
-
-
         })
     }
     })
@@ -232,3 +230,4 @@ limpiarPersonal = () => {
 limpiarMotivos = () => {
     document.getElementById('razon').innerHTML = "";
 }
+
