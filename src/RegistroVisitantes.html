@@ -9,62 +9,68 @@
         <link rel="stylesheet" href="RegistroVisit.css">   
         <script src="" async defer></script>
     </head>
-        <!----------Comienza el body con un starTime() para el reloj---------->
+    <!----------Comienza el body con un starTime() para el reloj---------->
     <body onload="startTime()">
         <main>
-        <!----------Header donde se encuentra el título----------------------->
+    <!----------Header donde se encuentra el título----------------------->
             <header id="titulo">
                 <h1><center>Torre Insurgentes Sur</center></h1>
             </header>
-        <!----------Inicia campo de registro---------------------------------->
+    <!----------Inicia campo de registro---------------------------------->
             <section id="registro">
                 <center>
-        <!----------Se registran datos personales del visitante--------------->
+    <!----------Se registran datos personales del visitante--------------->
                 <h2>Registro de visitantes</h2>
+
                 <label for="name">Nombre: </label><input type="text" id="name" required placeholder="Nombre(s)">
+
                 <label for="lastName">Apellido: </label><input type="text" id="lastName" required placeholder="Primer apellido"><br><hr>
+
                 <p>Ingrese su correo electronico y/o un número telefónico</p>
+
                 <label for="numberCall">Teléfono: </label><input type="tel" id="numberCall" placeholder="8 dígitos">
+
                 <label for="eMail">E-mail: </label><input type="mail" id="eMail" placeholder="usuario@ejemplo.com"><br><hr><br>
-        <!----------Se capturan datos propios de koworking-------------------->
-                <label for="dropdown">Empresa / oficina a la que visita: </label><br>
-                <select name="floor" class="form-control" id="dropdown" required>
-                    <option disabled selected value>---> Seleccione la opción correcta</option>
-                    <option value="janitor">Planta baja / administración</option>
-                    <option value="floor1">Piso 1</option>
-                    <option value="floor2">Piso 2</option>
-                    <option value="floor3">Piso 3</option>
-                    <option value="floor4">Piso 4</option>
-                    <option value="floor5">Piso 5</option>
-                    <option value="floor6">Piso 6</option>
-                    <option value="floor7">Piso 7</option>
-                    <option value="floor8">Piso 8</option>
-                </select><br><br>
-                <label for="person">Persona a la que visita: </label><input type="text" id="person" placeholder="Nombre del personal" required>
-                <label for="reason">Motivo de su visita: </label><input type="text" id="reason" placeholder="Escriba brevemente su motivo" required><br>
+
+    <!----------Se capturan datos propios de coworking-------------------->
+                <label for="exampleDataList" class="form-label">Empresa / oficina a la que visita: </label><br>
+                <input class="form-control" id="oficina" list="pisos" placeholder="Ingrese piso/compañía" required>
+                    <datalist id="pisos"></datalist><br><br>
+
+                <label for="exampleDataList" class="form-label">Personal al que visita: </label><br>
+                <input class="form-control" list="personal" id="gente" placeholder="Ingrese nombre del personal" required><br><br>
+                    <datalist id="personal"></datalist>
+
+                <label for="reason">Motivo de su visita: </label><br>
+                <input class="form-control" list="razon" id="reason" placeholder="¿Cuál es el motivo de su visita?" required><br>
+                    <datalist id="razon"></datalist>
+
                 <p>¿Cuenta con una cita o desea anunciarse?</p>
+
                 <label><input name="date" value="cita" type="radio" class="input-radio" cheked>Tengo cita</label>
-                <label><input name="date" value="sin cita" type="radio" class="input-radio" >Deseo anunciarme</label><br><hr><br>
+
+                <label><input name="date" value="sin cita" type="radio" class="input-radio">Deseo anunciarme</label><br><hr><br>
+
                 <input type="button" id="register" value="Registar visita"><br><br>
                 </center>
             </section>
-        <!----------Aside, comienza el aside en donde aparece el reloj y la fotografía-->
+    <!----------Aside, comienza el aside en donde aparece el reloj y la fotografía-->
             <aside id="foto">
                 <center>
-        <!----------Reloj--------------------------------------------------------------->
+    <!----------Reloj--------------------------------------------------------------->
                     <div id="clockdate">
                         <div class="clockdate-wrapper">
                             <div id="clock"></div>
                             <div id="date"></div>
                         </div>
                     </div>
-        <!----------Boton para tomar la foto-------------------------------------------->
+    <!----------Boton para tomar la foto-------------------------------------------->
                     <div>
                         <select name="listaDeDispositivos" id="listaDeDispositivos"></select>
                         <button id="boton">Tomar foto</button>
                     </div>
                     <div>
-        <!----------Video--------------------------------------------------------------->
+    <!----------Video--------------------------------------------------------------->
                         <video muted="muted" id="video"></video>
 	                    <canvas id="canvas" style="display: none;"></canvas>
                         <br>
@@ -74,7 +80,7 @@
             </center>
             </aside>
         </main>
-        <!----------Script-------------------------------------------------------------->
-        <script src="index.js"></script>
+    <!----------Script-------------------------------------------------------------->
+        <script src="registroVisit.js"></script>
     </body>
 </html>

@@ -1,0 +1,181 @@
+{
+    "Empresas": {
+        "PB: Administración" : {
+            "Personal":["Juanito Garcia", "Jacinto Hernández", "Ramón Castrejón"],
+            "Encargado": "Vania Ramirez",
+            "Registro": {
+                "Nombre": "",
+                "Apellido": "",
+                "Correo": "",
+                "Teléfono": "",
+                "Motivo de la visita" : [
+                    "entrevista",
+                    "paquetería",
+                    "estudiante", 
+                    "personal",
+                    "reunion",
+                    "otro"
+                ],
+                "tiene cita": ""
+            }
+        },
+        "P1: AeroMex S.A.": {
+            "Personal":["Rodolfo Valbuena", "Javier Rodriguez", "Romina Saltillo"],
+            "Encargado": "Jacito Air",
+            "Registro": {
+                "Nombre": "",
+                "Apellido": "",
+                "Correo": "",
+                "Teléfono": "",
+                "Motivo de la visita" : [
+                    "entrevista",
+                    "paquetería",
+                    "estudiante", 
+                    "personal",
+                    "reunion",
+                    "otro"
+                ],
+                "tiene cita": ""
+            }
+        },
+        "P2: Gestión Pedagógica S.C.": {
+            "Personal":["Pedro Escobar", "Felipe Arellano", "Walter Hartwell"],
+            "Encargado": "Oscar Ruiz",
+            "Registro": {
+                "Nombre": "",
+                "Apellido": "",
+                "Correo": "",
+                "Teléfono": "",
+                "Motivo de la visita" : [
+                    "entrevista",
+                    "paquetería",
+                    "estudiante", 
+                    "personal",
+                    "reunion",
+                    "otro"
+                ],
+                "tiene cita": ""
+            }
+        },
+        "P3: Data Studio Analize S.C.":
+        {
+            "Personal":["José Einstenberg", "Lupita Reynosa", "Noel Clausto"],
+            "Encargado": "Alberto Gutierrez",
+            "Registro": {
+                "Nombre": "",
+                "Apellido": "",
+                "Correo": "",
+                "Teléfono": "",
+                "Motivo de la visita" : [
+                    "entrevista",
+                    "paquetería",
+                    "estudiante", 
+                    "personal",
+                    "reunion",
+                    "otro"
+                ],
+                "tiene cita": ""
+            }
+        },
+        "P4: Vanguard Marketing México":
+        {
+            "Personal":["Patricio Cuevas", "Marcos Zuñiga", "Emiliano Mosqueda"],
+            "Encargado": "Mónica Macal",
+            "Registro": {
+                "Nombre": "",
+                "Apellido": "",
+                "Correo": "",
+                "Teléfono": "",
+                "Motivo de la visita" : [
+                    "entrevista",
+                    "paquetería",
+                    "estudiante", 
+                    "personal",
+                    "reunion",
+                    "otro"
+                ],
+                "tiene cita": ""
+            }
+        },
+        "P5: BTS Army Club S.A.":
+        {
+            "Personal":["Jackelyn Chagoya", "Bruno Lee-chun", "Angeles Mulian"],
+            "Encargado": "Amanda Ramírez",
+            "Registro": {
+                "Nombre": "",
+                "Apellido": "",
+                "Correo": "",
+                "Teléfono": "",
+                "Motivo de la visita" : [
+                    "entrevista",
+                    "paquetería",
+                    "estudiante", 
+                    "personal",
+                    "reunion",
+                    "otro"
+                ],
+                "tiene cita": ""
+            }
+        },
+        "P6: Revista XY":
+        {
+            "Personal":["Emiliano Fernández", "Maria James", "Carlos Clentón"],
+            "Encargado": "Elías Hernandez",
+            "Registro": {
+                "Nombre": "",
+                "Apellido": "",
+                "Correo": "",
+                "Teléfono": "",
+                "Motivo de la visita" : [
+                    "entrevista",
+                    "paquetería",
+                    "estudiante", 
+                    "personal",
+                    "reunion",
+                    "otro"
+                ],
+                "tiene cita": ""
+            }
+        },
+        "P7: El Puerto, Agencia de Viajes":
+        {
+            "Personal":["Charlie Duarte", "Tomás Holanda", "Adelina Laureles"],
+            "Encargado": "Fernanda Fajardo",
+            "Registro": {
+                "Nombre": "",
+                "Apellido": "",
+                "Correo": "",
+                "Teléfono": "",
+                "Motivo de la visita" : [
+                    "entrevista",
+                    "paquetería",
+                    "estudiante", 
+                    "personal",
+                    "reunion",
+                    "otro"
+                ],
+                "tiene cita": ""
+            }
+        },
+        "P8: Bussines Indian-Mex SRL":
+        {
+            "Personal":["Khale Ramírez", "Samantha García", "Dalíla Buendía"],
+            "Encargado": "Vivek Baraduaj",
+            "Registro": {
+                "Nombre": "",
+                "Apellido": "",
+                "Correo": "",
+                "Teléfono": "",
+                "Motivo de la visita" : [
+                    "entrevista",
+                    "paquetería",
+                    "estudiante", 
+                    "personal",
+                    "reunion",
+                    "otro"
+                ],
+                "tiene cita": ""
+            }
+        }        
+    }
+}
