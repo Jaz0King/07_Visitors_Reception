@@ -92,6 +92,3 @@ export function renderGraph(sede, gen) {
   myChart.data['datasets'][0].data.push(resto)
   myChart.update()
 }
- 
-  
-
