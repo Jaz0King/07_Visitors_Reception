@@ -211,8 +211,18 @@ fetch(registrar)
                 imprimirMotivosVisita.innerHTML += `
                 <option value="${razon}">`
             }
-
-
+            const nombres = document.getElementById('name').value
+            console.log(nombres);
+            const apellido = document.getElementById('lastName').value
+            console.log(apellido);
+            const numberCall = document.getElementById('numberCall').value
+            console.log(numberCall);
+            const eMail = document.getElementById('eMail').value
+            console.log(eMail);
+            const cita = document.getElementById('cita').value
+            console.log(cita);
+            const noCita = document.getElementById('sinCita').value
+            console.log(noCita);
         })
     }
     })
