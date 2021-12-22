@@ -28,7 +28,9 @@
   }
   
   h1 {
-    color: rgb(243, 150, 82);
+    color: #F6B144;
+    font-size: 4.5em;
+    font-family: 'EB Garamond', serif;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -92,8 +94,6 @@
     border:rgb(15, 15, 15) 1px solid;
     color: rgb(2, 2, 2);
   }
-  
-
   
   #busqueda {
     position: sticky;
