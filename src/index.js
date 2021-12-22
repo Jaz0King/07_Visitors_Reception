@@ -4,6 +4,3 @@
  registro.addEventListener('click', () =>{
      window.location.href = "./RegistroVisitantes.html"
  })
-
- 
-

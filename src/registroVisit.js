@@ -245,13 +245,13 @@ const visitantes = document.getElementById('registro');
 visitantes.addEventListener('submit', async (e)=> {
     e.preventDefault();
     
-    const nombre = visitantes['name'].value; 
-    const apellido = visitantes['lastName'].value; 
-    const correo = visitantes['numberCall'].value; 
-    const teléfono = visitantes['eMail'].value; 
-    const oficina = visitantes['oficina'].value; 
-    const personal = visitantes['personal'].value; 
-    const cita = visitantes['date'].value;
+    const nombre = visitantes['#name'].value; 
+    const apellido = visitantes['#lastName'].value; 
+    const correo = visitantes['#numberCall'].value; 
+    const teléfono = visitantes['#eMail'].value; 
+    const oficina = visitantes['#oficina'].value; 
+    const personal = visitantes['#personal'].value; 
+    const cita = visitantes['#date'].value;
 
     const response = await db.collection('visitas').doc().set({
         nombre,
@@ -262,12 +262,9 @@ visitantes.addEventListener('submit', async (e)=> {
         personal,
         cita
     })
-   console.log(response)
+        console.log(response)
 })
 
   // const saveVisit = (nombre, apellido, correo,teléfono, oficina, personal, cita) => {
-    
-   
-   
 
 
