@@ -211,18 +211,7 @@ fetch(registrar)
                 imprimirMotivosVisita.innerHTML += `
                 <option value="${razon}">`
             }
-            const nombres = document.getElementById('name').value
-            console.log(nombres);
-            const apellido = document.getElementById('lastName').value
-            console.log(apellido);
-            const numberCall = document.getElementById('numberCall').value
-            console.log(numberCall);
-            const eMail = document.getElementById('eMail').value
-            console.log(eMail);
-            const cita = document.getElementById('cita').value
-            console.log(cita);
-            const noCita = document.getElementById('sinCita').value
-            console.log(noCita);
+          
         })
     }
     })
@@ -238,36 +227,76 @@ limpiarMotivos = () => {
 }
 
 
-//Firebase
-const db = firebase.firestore();
-const visitantes = document.getElementById('registro');
+//Función para guardar los datos en firebase
 
-visitantes.addEventListener('submit', async (e)=> {
-    e.preventDefault();
-    
-    const nombre = visitantes['name'].value; 
-    const apellido = visitantes['lastName'].value; 
-    const correo = visitantes['numberCall'].value; 
-    const teléfono = visitantes['eMail'].value; 
-    const oficina = visitantes['oficina'].value; 
-    const personal = visitantes['personal'].value; 
-    const cita = visitantes['date'].value;
-
-    const response = await db.collection('visitas').doc().set({
-        nombre,
-        apellido,
-        correo,
-        teléfono,
-        oficina,
-        personal,
-        cita
-    })
-   console.log(response)
-})
-
-  // const saveVisit = (nombre, apellido, correo,teléfono, oficina, personal, cita) => {
-    
+ 
+const condiciones = () => {
    
+    let buttoonReg = document.getElementById('register')
+    buttoonReg.addEventListener("click", async(e) => {
+
+        e.preventDefault();
+            await saveObj(objetos);
+            alert('Bienvenido a la Torre Insurgentes Sur'); 
+        
+    let nombre = document.getElementById('name').value; 
+    let apellido = document.getElementById('lastName').value; 
+    let correo = document.getElementById('eMail').value; 
+    let telefono = document.getElementById('numberCall').value; 
+    let oficina = document.getElementById('oficina').value; 
+    let personal = document.getElementById('personal').value; 
+    let cita = document.getElementById('date').value;
+    
+    if (nombre == null ||  nombre.length == 0 || /^\s+$/.test(nombre)){
+        alert('falta tu nombre')
+        return false;
+    } else if ( apellido == null || apellido.length == 0 || /^\s+$/.test(apellido)){
+        alert('falta tu apellido ')
+        return false;
+    } else if ( correo == null || correo.length == 0 || /^\s+$/.test(correo)){
+        alert('falta tu apellido ')
+        return false;
+    } else if ( telefono == null || telefono.length == 0 || /^\s+$/.test(telefono)){
+        alert('falta tu apellido ')
+        return false;
+    } else if ( oficina == null || oficina.length == 0 || /^\s+$/.test(oficina)){
+        alert('falta tu apellido ')
+        return false;
+    } else if ( personal == null || personal.length == 0 || /^\s+$/.test(personal)){
+        alert('falta tu apellido ')
+        return false;
+    } else if ( cita == null || cita.length == 0 || /^\s+$/.test(cita)){
+        alert('falta tu apellido ')
+        return false; 
+    }
+        
+    let objetos = {
+        nombre = document.getElementById('name').value,
+        apellido = document.getElementById('lastName').value, 
+        correo = document.getElementById('eMail').value, 
+        telefono = document.getElementById('numberCall').value,
+        oficina = document.getElementById('oficina').value, 
+        personal = document.getElementById('personal').value,
+        cita = document.getElementById('date').value
+    };    
+      
+    });
    
+    return true;
+};
+
+condiciones();
+
+ const db = firebase.firestore();
+ const saveObj = (obj) => {
+    db.collection("visitantes").doc().set(obj);
+}
+
+ 
+
+ 
+
+    
+
 
 
