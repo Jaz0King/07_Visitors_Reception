@@ -229,7 +229,7 @@ limpiarMotivos = () => {
 
 //Función para guardar los datos en firebase
 
- 
+/* 
 const condiciones = () => {
    
     let buttoonReg = document.getElementById('register')
@@ -291,7 +291,7 @@ condiciones();
  const saveObj = (obj) => {
     db.collection("visitantes").doc().set(obj);
 }
-
+*/
  
 
  
