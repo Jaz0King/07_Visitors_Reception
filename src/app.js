@@ -14,7 +14,7 @@ entrar.addEventListener('click', () =>{
         console.log(error)
     }
 })
-
+/*
 btnComeBack.addEventListener('click', () => {
     window.location.href = "./index.html"
   })
@@ -92,6 +92,6 @@ export function renderGraph(sede, gen) {
   myChart.data['datasets'][0].data.push(resto)
   myChart.update()
 }
- 
+*/ 
   
 

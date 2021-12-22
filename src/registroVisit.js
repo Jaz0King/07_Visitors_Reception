@@ -164,13 +164,6 @@ const llenarSelectConDispositivosDisponibles = () => {
     }
 })();
 
-// //-----Funcionalidad del botón registro de visitantes
-// let registro = document.getElementById('reg')
-// //-----Al momento de dar click en el botón de registro de visitantes dirige a la pantalla de registro
-// registro.addEventListener('click', () =>{
-//     window.location.href = "./RegistroVisitantes.html"
-// })
-
 //Iterar datos de JSON
 const registrar = "../data/TorreInsurgentes.json"
 
@@ -224,6 +217,7 @@ fetch(registrar)
     }
     })
 }
+
 registrarVisit()
 
 limpiarPersonal = () => {
@@ -232,3 +226,38 @@ limpiarPersonal = () => {
 limpiarMotivos = () => {
     document.getElementById('razon').innerHTML = "";
 }
+
+
+//Firebase
+const db = firebase.firestore();
+const visitantes = document.getElementById('registro');
+
+visitantes.addEventListener('submit', async (e)=> {
+    e.preventDefault();
+    
+    const nombre = visitantes['name'].value; 
+    const apellido = visitantes['lastName'].value; 
+    const correo = visitantes['numberCall'].value; 
+    const teléfono = visitantes['eMail'].value; 
+    const oficina = visitantes['oficina'].value; 
+    const personal = visitantes['personal'].value; 
+    const cita = visitantes['date'].value;
+
+    const response = await db.collection('visitas').doc().set({
+        nombre,
+        apellido,
+        correo,
+        teléfono,
+        oficina,
+        personal,
+        cita
+    })
+   console.log(response)
+})
+
+  // const saveVisit = (nombre, apellido, correo,teléfono, oficina, personal, cita) => {
+    
+   
+   
+
+
