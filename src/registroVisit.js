@@ -200,7 +200,7 @@ fetch(registrar)
             imprimirPersonal.innerHTML += `
             <option value="${gente}">`
             }
-//iterar motivos de visita
+ // iterar motivos de visita
             const motivosVisita = document.getElementById('reason').value
             console.log(motivosVisita);
             console.log(pisoArr[0].Empresas[seleccionOficina].Registro["Motivo de la visita"]);
@@ -211,24 +211,7 @@ fetch(registrar)
                 imprimirMotivosVisita.innerHTML += `
                 <option value="${razon}">`
             }
-            
-            const nombres = document.getElementById('name').value
-            console.log(nombres);
-            const apellido = document.getElementById('lastName').value
-            console.log(apellido);
-            const numberCall = document.getElementById('numberCall').value
-            console.log(numberCall);
-            const eMail = document.getElementById('eMail').value
-            console.log(eMail);
-            const personal = document.getElementById('gente').value
-            console.log(personal)
-            const motivo = document.getElementById('reason').value
-            console.log(motivo);
-            const cita = document.getElementById('cita').value
-            console.log(cita);
-            
-          //  const noCita = document.getElementById('sinCita').value
-          //  console.log(noCita);
+       
         })
     }
     })
@@ -261,7 +244,7 @@ regVis.addEventListener('click', async (e)=> {
         motivo: document.getElementById('reason').value,
         cita: document.getElementById('cita').value,
     }
-    console.log(obj)
+    //console.log(obj)
     await saveObj(obj);
 
 })
