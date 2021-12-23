@@ -66,3 +66,9 @@ video {
   width: 33vh;
   margin: 1vh auto;
 }
+
+canvas {
+  height: 30vh;
+  width: 33vh;
+  margin: 1vh auto;
+}
