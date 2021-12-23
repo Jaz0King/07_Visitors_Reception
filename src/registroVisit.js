@@ -29,6 +29,7 @@ function checkTime(i) {
     }
     return i;
 }
+
 //-----Función que muestra la webcam disponible
 const tieneSoporteUserMedia = () =>
     !!(navigator.getUserMedia || (navigator.mozGetUserMedia || navigator.mediaDevices.getUserMedia) || navigator.webkitGetUserMedia || navigator.msGetUserMedia)
@@ -143,20 +144,33 @@ const llenarSelectConDispositivosDisponibles = () => {
                     $video.pause();
 
 //-----Obtener contexto del canvas y dibujar sobre él
-                    let contexto = $canvas.getContext("2d");
+                    function getBase64Image(video) {
+                        let canvas = document.createElement("canvas");
+                        let contexto = $canvas.getContext("2d");
                     $canvas.width = $video.videoWidth;
                     $canvas.height = $video.videoHeight;
                     contexto.drawImage($video, 0, 0, $canvas.width, $canvas.height);
 
                     let foto = $canvas.toDataURL(); //Esta es la foto, en base 64
+                    let dataURL = canvas.toDataURL();
+                        return dataURL;
+                    }
 
-                    let enlace = document.createElement('a'); // Crear un <a>
-                    //enlace.download = "foto_parzibyte.me.png";
-                    enlace.href = foto;
-                    //enlace.click();
+                    let base64 = getBase64Image(document.getElementById("video"));
+                    console.log(base64);
+                    regVis.foto = base64;
+                    regVis.date = new Date();
+                    console.log(regVis);
+                    
+                });
+
+                    // let enlace = document.createElement('a'); // Crear un <a>
+                    // //enlace.download = "foto_parzibyte.me.png";
+                    // enlace.href = foto;
+                    // //enlace.click();
 //-----Reanudar reproducción
                     $video.play();
-                });
+                
             }, (error) => {
                 console.log("Permiso denegado o error: ", error);
                 $estado.innerHTML = "No se puede acceder a la cámara, o no diste permiso.";
@@ -265,6 +279,13 @@ regVis.addEventListener('click', async (e)=> {
     await saveObj(obj);
 
 })
+
+let volverHome = document.getElementById("register");
+
+        volverHome.addEventListener("click", () => {
+            alert("Sea usted bienvenid@");
+            window.location.href = "./index.html";
+        });
 
 const saveObj = (obj) => {
     db.collection('visitantes').doc().set(obj);
