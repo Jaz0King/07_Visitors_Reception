@@ -30,10 +30,11 @@
 
   img {
     display: flex;
-    margin: 5vh;
+    margin-top: 5vh;
+    margin-bottom: 0;
     align-items: center;
     flex-direction: column;
-    height: 60vh;
+    height: 46vh;
    }
 
    #visitor {
@@ -91,11 +92,10 @@
   }
 
   h1 {
-    color: #F6B144;
-    font-size: 4.5em;
-    font-family: 'EB Garamond', serif;
-    align-items: center;
-
+    color: #ffffff;
+    font-size: 4.3em;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 10px;
   }
  
   h5 {
@@ -103,7 +103,6 @@
     margin-bottom: 2vh;
     font-family: 'EB Garamond', serif;
     color: #838080;
-    
   }
 
   button {
@@ -111,8 +110,9 @@
     width: 50vh;
     font-size: 2.5em;
     border-radius: 5vh;
-    background-color: #f8f402;
-    font-family: 'Cormorant Garamond', serif;
+    background-color: #dadada;
+    color: #393534;
+    font-family: 'EB Garamond', serif;
   }
 
 
