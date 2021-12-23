@@ -1,91 +1,89 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    background-color: #393534;
-  }
+body {
+  background-color: #393534;
+}
 
-  main {
-    height: 100vh;
-    width: 100%;
-    gap: 1% 1%;
-    grid-template-rows: Document 1fr 1fr 1fr;
-    grid-template-areas:
-     "header"
-     "title "
-     "registro"
-     "formID";
-  }
+main {
+  height: 100vh;
+  width: 100%;
+  gap: 1% 1%;
+  grid-template-rows: Document 1fr 1fr 1fr;
+  grid-template-areas:
+    "header"
+    "title "
+    "registro"
+    "formID";
+}
 
-  header {
-    grid-area: header;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
-  img {
-    display: flex;
-    margin-top: 10vh;
-    margin-bottom: 0;
-    align-items: center;
-    flex-direction: column;
-    height: 46vh;
-   }
+img {
+  display: flex;
+  margin-top: 10vh;
+  margin-bottom: 0;
+  align-items: center;
+  flex-direction: column;
+  height: 46vh;
+}
 
-  #title {
-    grid-area: title;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
+#title {
+  grid-area: title;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
-  #registro {
-    grid-area: registro;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
+#registro {
+  grid-area: registro;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
-  #formID {
-    grid-area: formID;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
+#formID {
+  grid-area: formID;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
-  h1 {
-    color: #ffffff;
-    font-size: 3em;
-    font-family: 'Cormorant Garamond', serif;
-    margin-bottom: 10px;
-    margin-top: 30px;
-  }
- 
-  h5 {
-    margin-top: 10vh;
-  }
+h1 {
+  color: #ffffff;
+  font-size: 3em;
+  font-family: "Cormorant Garamond", serif;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
 
-  button {
-    height: 6vh;
-    width: 20vh;
-    font-size: 1.5em;
-    border-radius: 15px;
-    margin: 10px;
-   background-color: #dadada;
-    color: #393534;
-    font-family: 'EB Garamond', serif;
-  }
+h5 {
+  margin-top: 10vh;
+}
 
-  input {
-    height: 7h;
-    width: 35vh;
-    font-size: 1.5em;
-    border-radius: 5px;
-    margin-bottom: 5px;
-  }
+button {
+  height: 6vh;
+  width: 20vh;
+  font-size: 1.5em;
+  border-radius: 15px;
+  margin: 10px;
+  background-color: #dadada;
+  color: #393534;
+  font-family: "EB Garamond", serif;
+}
 
-  
+input {
+  height: 7h;
+  width: 35vh;
+  font-size: 1.5em;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
