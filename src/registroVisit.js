@@ -242,7 +242,6 @@ const obj = {saludo:'hola'}
 db.collection("visitantes").doc().set(obj);
 
 //Firebase
-const db = firebase.firestore();
 const visitantes = document.getElementById('registro');
 
 visitantes.addEventListener('submit', async (e)=> {
@@ -255,6 +254,7 @@ visitantes.addEventListener('submit', async (e)=> {
     const oficina = visitantes['#oficina'].value; 
     const personal = visitantes['#personal'].value; 
     const cita = visitantes['#date'].value;
+    const foto = visitantes['#canvas'].value;
 
     const response = await db.collection('visitas').doc().set({
         nombre,
@@ -263,7 +263,8 @@ visitantes.addEventListener('submit', async (e)=> {
         teléfono,
         oficina,
         personal,
-        cita
+        cita,
+        foto
     })
         console.log(response)
 })
