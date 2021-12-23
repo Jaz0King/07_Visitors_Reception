@@ -238,7 +238,18 @@ limpiarMotivos = () => {
 }
 
 const db = firebase.firestore();
-const obj = {saludo:'hola'}
+const obj = {
+    //saludo:'hola'
+    nombre: document.getElementById('name').value,
+    apellido: document.getElementById('lastName').value,
+    telefono: document.getElementById('numberCall').value,
+    email: document.getElementById('eMail').value,
+    compañia: document.getElementById('oficina').value,
+    personal: document.getElementById('gente').value,
+    motivo: document.getElementById('reason').value,
+    cita: document.getElementById('cita').value,
+}
+
 db.collection("visitantes").doc().set(obj);
 
 //Firebase

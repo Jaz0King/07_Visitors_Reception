@@ -43,11 +43,13 @@
 
                 <label for="reason">Motivo de su visita: </label><br>
                 <input class="form-control" list="razon" id="reason" placeholder="¿Cuál es el motivo de su visita?" required><br>
-                    <datalist id="razon"></datalist>
+                    <datalist id="razon"></datalist><br>
 
-                <p>¿Cuenta con una cita o desea anunciarse?</p>
-                <label><input name="date" value="cita" type="radio" id="cita" class="input-radio" cheked>Tengo cita</label>
-                <label><input name="date" value="sin cita" type="radio" id="sinCita" class="input-radio">Deseo anunciarme</label><br><hr><br>
+                <label for="exampleDataList" class="form-label">¿Cuenta con cita?</label><br>
+                  <select class="form-select" aria-label="Default select example" id="cita" required>
+                    <option selected></option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option></select><br><br>
 
                 <input type="button" id="register" value="Registar visita"><br><br>
                 </center>
