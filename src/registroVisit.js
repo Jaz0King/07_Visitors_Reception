@@ -237,6 +237,9 @@ limpiarMotivos = () => {
     document.getElementById('razon').innerHTML = "";
 }
 
+const db = firebase.firestore();
+const obj = {saludo:'hola'}
+db.collection("visitantes").doc().set(obj);
 
 //Firebase
 const db = firebase.firestore();

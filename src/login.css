@@ -5,11 +5,10 @@
   }
 
   body {
-    background-image: url(../assets/imágenes/bkg2.png);
+    background-color: #393534;
   }
 
   main {
-    
     height: 100vh;
     width: 100%;
     gap: 1% 1%;
@@ -30,10 +29,11 @@
 
   img {
     display: flex;
-    margin: 5vh;
+    margin-top: 10vh;
+    margin-bottom: 0;
     align-items: center;
     flex-direction: column;
-    height: 50vh;
+    height: 46vh;
    }
 
   #title {
@@ -58,8 +58,11 @@
   }
 
   h1 {
-    color: rgb(243, 150, 82);
-    font-size: 3.5em;
+    color: #ffffff;
+    font-size: 3em;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 10px;
+    margin-top: 30px;
   }
  
   h5 {
@@ -67,15 +70,22 @@
   }
 
   button {
-      height: 7vh;
-      width: 20vh;
-      font-size: 1.5em;
-      border-radius: 15px;
+    height: 6vh;
+    width: 20vh;
+    font-size: 1.5em;
+    border-radius: 15px;
+    margin: 10px;
+   background-color: #dadada;
+    color: #393534;
+    font-family: 'EB Garamond', serif;
   }
 
   input {
     height: 7h;
-    width: 25vh;
+    width: 35vh;
     font-size: 1.5em;
     border-radius: 5px;
+    margin-bottom: 5px;
   }
+
+  
