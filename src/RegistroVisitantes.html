@@ -13,8 +13,10 @@
     <body onload="startTime()">
         <main>
     <!----------Header donde se encuentra el título----------------------->
-            <header id="titulo">
-                <h1><center>Torre Insurgentes Sur</center></h1>
+            <header id="titulo"><center>
+                <img src="/assets/IMG/logoTIS.jpg" alt="logo">
+                <!-- <h1><center>Torre Insurgentes Sur</center></h1> -->
+            </center>
             </header>
     <!----------Inicia campo de registro---------------------------------->
             <section id="registro">
@@ -33,24 +35,24 @@
                 <label for="eMail">E-mail: </label><input type="mail" id="eMail" placeholder="usuario@ejemplo.com"><br><hr><br>
 
     <!----------Se capturan datos propios de coworking-------------------->
-                <label for="exampleDataList" class="form-label">Empresa / oficina a la que visita: </label><br>
+                <label for="exampleDataList" class="form-label">Empresa / oficina a la que visita: </label>
                 <input class="form-control" id="oficina" list="pisos" placeholder="Ingrese piso/compañía" required>
                     <datalist id="pisos"></datalist><br><br>
 
-                <label for="exampleDataList" class="form-label">Personal al que visita: </label><br>
+                <label for="exampleDataList" class="form-label">Personal al que visita: </label>
                 <input class="form-control" list="personal" id="gente" placeholder="Ingrese nombre del personal" required><br><br>
                     <datalist id="personal"></datalist>
 
-                <label for="reason">Motivo de su visita: </label><br>
+                <label for="reason">Motivo de su visita: </label>
                 <input class="form-control" list="razon" id="reason" placeholder="¿Cuál es el motivo de su visita?" required><br>
                     <datalist id="razon"></datalist><br>
 
-                <label for="exampleDataList" class="form-label">¿Cuenta con cita?</label><br>
+                <label for="exampleDataList" class="form-label">¿Cuenta con cita?</label>
                   <select class="form-select" aria-label="Default select example" id="cita" required>
                     <option selected></option>
                     <option value="si">Sí</option>
                     <option value="no">No</option></select><br><br>
-                <input type="button" id="register" value="Registar visita"><br><br>
+                <input style="cursor:pointer;" type="button" id="register" value="Registar visita"><br><br><br>
                 </center>
             </section>
     <!----------Aside, comienza el aside en donde aparece el reloj y la fotografía-->
@@ -66,11 +68,11 @@
     <!----------Boton para tomar la foto-------------------------------------------->
                     <div>
                         <select name="listaDeDispositivos" id="listaDeDispositivos" hidden></select>
-                        <button id="boton">Tomar foto</button>
+                        <button style="cursor:pointer;" id="boton">Tomar foto</button>
                     </div>
                     <div>
     <!----------Video--------------------------------------------------------------->
-                        <video muted="muted" id="video"></video>
+                        <video muted="muted" id="video"></video><br>
 	                    <canvas id="canvas" ></canvas>
                         <br>
                     </div>
