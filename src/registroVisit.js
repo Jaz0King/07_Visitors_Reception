@@ -253,7 +253,7 @@ const obj = {
 db.collection("visitantes").doc().set(obj);
 
 //Firebase
-const visitantes = document.getElementById('registro');
+const visitantes = document.getElementById('register');
 
 visitantes.addEventListener('submit', async (e)=> {
     e.preventDefault();
