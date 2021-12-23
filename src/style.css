@@ -30,7 +30,7 @@
 
   img {
     display: flex;
-    margin-top: 5vh;
+    margin-top: 10vh;
     margin-bottom: 0;
     align-items: center;
     flex-direction: column;
@@ -93,14 +93,14 @@
 
   h1 {
     color: #ffffff;
-    font-size: 4.3em;
+    font-size: 4.7em;
     font-family: 'Cormorant Garamond', serif;
     margin-bottom: 10px;
   }
  
   h5 {
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-top: 30px;
+    margin-bottom: 2px;
     font-family: 'EB Garamond', serif;
     color: #838080;
   }
