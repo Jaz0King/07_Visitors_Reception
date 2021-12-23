@@ -142,12 +142,14 @@ element.style {
   border-radius: 2.25rem;
 } 
    
-  footer{
-    grid-area: aside;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-  }
+footer {
+  grid-area: footer;
+  margin-top: 10px;
+  color: #ffff;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: row;
+}
   
  
   
