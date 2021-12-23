@@ -5,7 +5,7 @@
   }
 
   body {
-    background-color: #393534;
+    background-color: #434343;
   }
 
   main {
@@ -110,7 +110,7 @@
     width: 50vh;
     font-size: 2.5em;
     border-radius: 5vh;
-    background-color: #dadada;
+    background-color: #F4C846;
     color: #393534;
     font-family: 'EB Garamond', serif;
   }

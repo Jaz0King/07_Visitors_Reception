@@ -4,7 +4,7 @@
   }
   
   body {
-    background-image: url(../assets/IMG/bkg2.png);
+    background-color: #434343;
   }
   
   main {
@@ -16,42 +16,50 @@
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
       "header header header"
-      "alumnos alumnos aside"
-      "alumnos alumnos aside";
+      "visitantes visitantes aside"
+      "visitantes visitantes aside";
   }
   
   header {
     grid-area: header;
     display: flex;
     justify-content: center;
-    margin: 2vh;
+    margin: 1vh;
   }
   
   h1 {
-    color: #F6B144;
-    font-size: 4.5em;
-    font-family: 'EB Garamond', serif;
+    color: #F4C846;
+    font-size: 3.5em;
     text-align: center;
     display: flex;
     justify-content: space-between;
-    margin-top: 10vh;
-    margin-right: 5vh;
-    font-size: 8vh;
+    margin-top: 20vh;
+    font-family: 'Cormorant Garamond', serif;
   }
-  
+
+  h2 {
+    color: rgb(255, 255, 255);
+    font-size: 2.5em;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22vh;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
   .btn {
-    background-color: rgb(16, 89, 248);
+    background-color: rgb(255, 255, 255);
+    color:rgb(2, 2, 2);
     margin: 10px;
   }
   
   #button-addon2 {
-    background-color: rgb(16, 89, 248);
+    background-color: rgb(255, 255, 255);
+    color:rgb(2, 2, 2);
     margin: 0px;
   }
   
   #marcoImagen {
-    width: 50%;
-    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,14 +82,13 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
-  
-  #logoLoc{
-    border-radius: 225px;
-    background-color: transparent;
-  }
-  
-  img {
+    
+  #logo {
     width: 30vh;
+  }
+
+  img {
+    width: 25vh;
   }
 
   aside {
@@ -91,8 +98,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border:rgb(15, 15, 15) 1px solid;
-    color: rgb(2, 2, 2);
+    border:rgb(255, 255, 255) 1px solid;
+    color: rgb(255, 255, 255);
   }
   
   #busqueda {
@@ -100,14 +107,40 @@
   }
   
   #visitantes {
-    grid-area: alumnos;
+    grid-area: visitantes;
     background-color: transparent;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: auto;
     white-space: nowrap;
     margin: 2px;
-    border:rgb(15, 15, 15) 1px solid;
+    border:#F4C846 3px solid;
   }
+
+  #nombres {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+element.style {
+  width: 18rem;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #ffffff;
+  background-clip: border-box;
+  border: 8px solid rgb(244, 200, 70 / 38%);
+  border-radius: 2.25rem;
+} 
    
   footer{
     grid-area: aside;
