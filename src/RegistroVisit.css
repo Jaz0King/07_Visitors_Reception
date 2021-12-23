@@ -1,31 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: rgba(0, 0, 0, 0.061);
+  background-color: #434343;
 }
 
 main {
   display: grid;
-  grid-template-columns: 3fr 1.5fr;
-  grid-template-rows: 1fr 4fr;
+  height: 100vh;
+  width: 100%;
+  gap: 1% 1%;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1.5fr 1fr;
   grid-template-areas:
     "header header"
     "section aside";
-  column-gap: 1vh;
-  row-gap: 1vh;
+ 
 }
 
 header {
   grid-area: header;
-  font-family: "Cormorant Garamond", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh;
+}
+
+#registro {
+  grid-area: section;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh;
+}
+
+#lock{
+  width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+h1 {
+  color: #F4C846;
+  font-size: 2.5em;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 section {
   grid-area: section;
-  border: 2px ridge rgb(3, 47, 3);
+  border:rgb(255, 255, 255) 1px solid;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
 }
 
 aside {
   grid-area: aside;
-  border: 2px ridge goldenrod;
+  border:#F4C846 1px solid;
+  border-radius: 10px;
 }
 
 input {
@@ -71,16 +115,12 @@ label {
 }
 
 img {
-  height: 18vh;
   width: 35vh;
-  border-radius: 12px;
-  border-radius: 10px;
-  margin: center;
 }
 
 video {
-  height: 22vh;
-  width: 28vh;
+  height: 32vh;
+  width: 41vh;
   margin: center;
 }
 

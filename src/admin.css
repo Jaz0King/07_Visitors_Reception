@@ -29,12 +29,12 @@
   
   h1 {
     color: #F4C846;
-    font-size: 3.5em;
+    font-size: 2.5em;
     text-align: center;
     display: flex;
     justify-content: space-between;
-    margin-top: 20vh;
-    font-family: 'Cormorant Garamond', serif;
+    margin-top: 22vh;
+    font-family: "Cormorant Garamond", serif;
   }
 
   h2 {
@@ -84,7 +84,7 @@
   }
     
   #logo {
-    width: 30vh;
+    width: 35vh;
   }
 
   img {
