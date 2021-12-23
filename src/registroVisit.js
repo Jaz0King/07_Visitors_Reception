@@ -211,6 +211,7 @@ fetch(registrar)
                 imprimirMotivosVisita.innerHTML += `
                 <option value="${razon}">`
             }
+            
             const nombres = document.getElementById('name').value
             console.log(nombres);
             const apellido = document.getElementById('lastName').value
@@ -219,10 +220,15 @@ fetch(registrar)
             console.log(numberCall);
             const eMail = document.getElementById('eMail').value
             console.log(eMail);
+            const personal = document.getElementById('gente').value
+            console.log(personal)
+            const motivo = document.getElementById('reason').value
+            console.log(motivo);
             const cita = document.getElementById('cita').value
             console.log(cita);
-            const noCita = document.getElementById('sinCita').value
-            console.log(noCita);
+            
+          //  const noCita = document.getElementById('sinCita').value
+          //  console.log(noCita);
         })
     }
     })
@@ -238,48 +244,35 @@ limpiarMotivos = () => {
 }
 
 const db = firebase.firestore();
-const obj = {
-    //saludo:'hola'
-    nombre: document.getElementById('name').value,
-    apellido: document.getElementById('lastName').value,
-    telefono: document.getElementById('numberCall').value,
-    email: document.getElementById('eMail').value,
-    compañia: document.getElementById('oficina').value,
-    personal: document.getElementById('gente').value,
-    motivo: document.getElementById('reason').value,
-    cita: document.getElementById('cita').value,
-}
-
-db.collection("visitantes").doc().set(obj);
 
 //Firebase
-const visitantes = document.getElementById('registro');
 
-visitantes.addEventListener('submit', async (e)=> {
+const regVis = document.getElementById('register');
+regVis.addEventListener('click', async (e)=> {
     e.preventDefault();
-    
-    const nombre = visitantes['#name'].value; 
-    const apellido = visitantes['#lastName'].value; 
-    const correo = visitantes['#numberCall'].value; 
-    const teléfono = visitantes['#eMail'].value; 
-    const oficina = visitantes['#oficina'].value; 
-    const personal = visitantes['#personal'].value; 
-    const cita = visitantes['#date'].value;
-    const foto = visitantes['#canvas'].value;
+    const obj = {
+        //saludo:'hola'
+        nombre: document.getElementById('name').value,
+        apellido: document.getElementById('lastName').value,
+        telefono: document.getElementById('numberCall').value,
+        email: document.getElementById('eMail').value,
+        compañia: document.getElementById('oficina').value,
+        personal: document.getElementById('gente').value,
+        motivo: document.getElementById('reason').value,
+        cita: document.getElementById('cita').value,
+    }
+    console.log(obj)
+    await saveObj(obj);
 
-    const response = await db.collection('visitas').doc().set({
-        nombre,
-        apellido,
-        correo,
-        teléfono,
-        oficina,
-        personal,
-        cita,
-        foto
-    })
-        console.log(response)
 })
 
+const saveObj = (obj) => {
+    db.collection('visitantes').doc().set(obj);
+    console.log(obj)
+}
+
+
+//console.log(obj)
   // const saveVisit = (nombre, apellido, correo,teléfono, oficina, personal, cita) => {
 
 
