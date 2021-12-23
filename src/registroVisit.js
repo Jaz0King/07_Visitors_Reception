@@ -257,13 +257,13 @@ const saveObj = (obj) => {
     console.log(obj)
 }
 
-let volverHome = document.getElementById("register");
+/*let volverHome = document.getElementById("register");
 
         volverHome.addEventListener("click", () => {
             alert("Sea usted bienvenid@");
             window.location.href = "./index.html";
         });
-
+*/
 //console.log(obj)
   // const saveVisit = (nombre, apellido, correo,teléfono, oficina, personal, cita) => {
 
