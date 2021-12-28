@@ -106,7 +106,7 @@
     position: sticky;
   }
   
-  #visitantes {
+  #visitantesCard {
     grid-area: visitantes;
     background-color: transparent;
     border-radius: 15px;
@@ -116,13 +116,12 @@
     border:#F4C846 3px solid;
   }
 
-  #nombres {
+  #nombresCards {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
   }
-
 
 element.style {
   width: 18rem;

@@ -215,7 +215,6 @@ fetch(registrar)
                 imprimirMotivosVisita.innerHTML += `
                 <option value="${razon}">`
             }
-       
         })
     }
     })
@@ -262,7 +261,6 @@ const saveObj = (obj) => {
     db.collection('visitantes').doc().set(obj);
     console.log(obj)
 }
-
 
 //console.log(obj)
 
