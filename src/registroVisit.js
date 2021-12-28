@@ -29,6 +29,7 @@ function checkTime(i) {
     }
     return i;
 }
+
 //-----Función que muestra la webcam disponible
 const tieneSoporteUserMedia = () =>
     !!(navigator.getUserMedia || (navigator.mozGetUserMedia || navigator.mediaDevices.getUserMedia) || navigator.webkitGetUserMedia || navigator.msGetUserMedia)
@@ -51,6 +52,7 @@ const obtenerDispositivos = () => navigator
 
 //-----La función que es llamada después de que ya se dieron los permisos
 //-----Lo que hace es llenar el select con los dispositivos obtenidos
+
 const llenarSelectConDispositivosDisponibles = () => {
 
     limpiarSelect();
@@ -165,7 +167,8 @@ const llenarSelectConDispositivosDisponibles = () => {
     }
 })();
 
-//Iterar datos de JSON
+
+//-----Iterar datos de JSON------
 const registrar = "../data/TorreInsurgentes.json"
 
 let pisoArr = [];
@@ -201,7 +204,7 @@ fetch(registrar)
             imprimirPersonal.innerHTML += `
             <option value="${gente}">`
             }
- // iterar motivos de visita
+            // iterar motivos de visita
             const motivosVisita = document.getElementById('reason').value
             console.log(motivosVisita);
             console.log(pisoArr[0].Empresas[seleccionOficina].Registro["Motivo de la visita"]);
@@ -227,14 +230,15 @@ limpiarMotivos = () => {
     document.getElementById('razon').innerHTML = "";
 }
 
-const db = firebase.firestore();
-
 //Firebase
+
+const db = firebase.firestore();
 
 const regVis = document.getElementById('register');
 regVis.addEventListener('click', async (e)=> {
     e.preventDefault();
     const obj = {
+
         //saludo:'hola'
         nombre: document.getElementById('name').value,
         apellido: document.getElementById('lastName').value,
@@ -245,10 +249,12 @@ regVis.addEventListener('click', async (e)=> {
         motivo: document.getElementById('reason').value,
         cita: document.getElementById('cita').value,
         fotografia: `${foto}`,
-
     }
+
     //console.log(obj)
     await saveObj(obj);
+    alert("Sea usted bienvenid@ a Torre Insurgentes Sur");
+    //window.location.href = "./index.html";
 
 })
 
@@ -257,14 +263,8 @@ const saveObj = (obj) => {
     console.log(obj)
 }
 
-/*let volverHome = document.getElementById("register");
 
-        volverHome.addEventListener("click", () => {
-            alert("Sea usted bienvenid@");
-            window.location.href = "./index.html";
-        });
-*/
 //console.log(obj)
-  // const saveVisit = (nombre, apellido, correo,teléfono, oficina, personal, cita) => {
+
 
 
