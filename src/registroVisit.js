@@ -19,8 +19,7 @@ function startTime() {
     var curMonth = months[today.getMonth()];//getMonth() método devuelve el mes del año (0 a 11) de una fecha.
     var curYear = today.getFullYear();//getFullYear() devuelve el año completo (4 dígitos) de una fecha.
     var date = curWeekDay + ", " + curDay + " " + curMonth + " " + curYear;
-    document.getElementById("date").innerHTML = date; //impresión de la fecha en pantalla
-    
+    document.getElementById("date").innerHTML = date ; //impresión de la fecha en pantalla
     var time = setTimeout(function(){ startTime() }, 500);
 }
 function checkTime(i) {
@@ -37,12 +36,13 @@ const _getUserMedia = (...arguments) =>
     (navigator.getUserMedia || (navigator.mozGetUserMedia || navigator.mediaDevices.getUserMedia) || navigator.webkitGetUserMedia || navigator.msGetUserMedia).apply(navigator, arguments);
 
 //-----Declaramos elementos del DOM
-const $video = document.querySelector("#video"),
-    $canvas = document.querySelector("#canvas"),
-    $boton = document.querySelector("#boton"),
-    $listaDeDispositivos = document.querySelector("#listaDeDispositivos");
+ let canvas = document.getElementById("canvas");
+ let context = canvas.getContext("2d");
+ let video = document.getElementById("video");
+ let boton = document.getElementById("boton");
+ let $listaDeDispositivos = document.getElementById("listaDeDispositivos");
 
-const limpiarSelect = () => {
+ const limpiarSelect = () => {
     for (let x = $listaDeDispositivos.options.length - 1; x >= 0; x--)
         $listaDeDispositivos.remove(x);
 };
@@ -79,15 +79,8 @@ const llenarSelectConDispositivosDisponibles = () => {
         });
 }
 
-(function() {
-//-----Comenzamos viendo si tiene soporte, si no, nos detenemos
-    if (!tieneSoporteUserMedia()) {
-        alert("Lo siento. Tu navegador no soporta esta característica");
-        $estado.innerHTML = "Parece que tu navegador no soporta esta característica. Intenta actualizarlo.";
-        return;
-    }
 //-----Aquí guardaremos el stream globalmente
-    let stream;
+let stream;
 //-----Comenzamos pidiendo los dispositivos
     obtenerDispositivos()
         .then(dispositivos => {
@@ -120,7 +113,7 @@ const llenarSelectConDispositivosDisponibles = () => {
                 llenarSelectConDispositivosDisponibles();
 
 //-----Escuchar cuando seleccionen otra opción y entonces llamar a esta función
-                $listaDeDispositivos.onchange = () => {
+                listaDeDispositivos.onchange = () => {
 //-----Detener el stream
                     if (stream) {
                         stream.getTracks().forEach(function(track) {
@@ -135,39 +128,72 @@ const llenarSelectConDispositivosDisponibles = () => {
                 stream = streamObtenido;
 
 //-----Mandamos el stream de la cámara al elemento de vídeo
-                $video.srcObject = stream;
-                $video.play();
+                video.srcObject = stream;
+                video.play();
 
-//-----Escuchar el click del botón para tomar la foto
-                $boton.addEventListener("click", function() {
+ //------ Botón para capturar la fotografía
+ let captFoto = document.getElementById("boton")
+ captFoto.addEventListener("click", () => {
+  //------Función para la captura de la foto codificada
+     function fotoImg(video) {
+         let canvas = document.createElement("canvas"); //----Se muestra el video capturado por la cámara para tomar la fotografía
+         canvas.width = video.width;
+         canvas.height = video.height;
+         let context = canvas.getContext("2d");//----Se genera la imagen en 2d dentro del div
+         context.drawImage(video, 0, 0, canvas.width, canvas.height);
+         let dataURL = canvas.toDataURL(); //--------- Esta es la fotografía en base64
+         return dataURL;
+     }
+     let fotoFb = fotoImg(document.getElementById("canvas"));//------ Se pinta la imagen capturada por la cámara 
+     console.log(fotoFb);
+     context.drawImage(video, 0, 0, 320, 350); 
+     
+     //------- Funcionalidad para llamar a firebase y guardarlos 
 
-//-----Pausar reproducción
-                    $video.pause();
+const db = firebase.firestore();
 
-//-----Obtener contexto del canvas y dibujar sobre él
-                    let contexto = $canvas.getContext("2d");
-                    $canvas.width = $video.videoWidth;
-                    $canvas.height = $video.videoHeight;
-                    contexto.drawImage($video, 0, 0, $canvas.width, $canvas.height);
+const regVis = document.getElementById('register');
+regVis.addEventListener('click', async (e)=> {
+    e.preventDefault();
+    const obj = {
 
-                    let foto = $canvas.toDataURL(); //Esta es la foto, en base 64
-                    
-                    let enlace = document.createElement('a'); // Crear un <a>
-                    console.log(enlace);
-                    //enlace.download = "foto_parzibyte.me.png";
-                    enlace.href = foto;
-                    //enlace.click();
-//-----Reanudar reproducción
-                    $video.play();
-                });
+        //saludo:'hola'
+        nombre: document.getElementById('name').value,
+        apellido: document.getElementById('lastName').value,
+        telefono: document.getElementById('numberCall').value,
+        email: document.getElementById('eMail').value,
+        compañia: document.getElementById('oficina').value,
+        personal: document.getElementById('gente').value,
+        motivo: document.getElementById('reason').value,
+        cita: document.getElementById('cita').value,
+        fotografia: document.getElementById("canvas").value,
+        checkin: document.getElementById('date').value
+    // checkout: document.getElementById('').value,
+        
+    }
+    
+    obj.checkin = new Date();
+    obj.fotografia = fotoFb;
+    console.log(obj)
+    await saveObj(obj);
+    alert("Sea usted bienvenid@ a Torre Insurgentes Sur");
+    //window.location.href = "./index.html";
+
+})
+
+const saveObj = (obj) => {
+    db.collection('visitantes').doc().set(obj);
+    console.log(obj)
+}
+ });
+
             }, (error) => {
                 console.log("Permiso denegado o error: ", error);
                 $estado.innerHTML = "No se puede acceder a la cámara, o no diste permiso.";
             });
     }
-})();
 
-
+    
 //-----Iterar datos de JSON------
 const registrar = "../data/TorreInsurgentes.json"
 
@@ -228,41 +254,6 @@ limpiarPersonal = () => {
 limpiarMotivos = () => {
     document.getElementById('razon').innerHTML = "";
 }
-
-//Firebase
-
-const db = firebase.firestore();
-
-const regVis = document.getElementById('register');
-regVis.addEventListener('click', async (e)=> {
-    e.preventDefault();
-    const obj = {
-
-        //saludo:'hola'
-        nombre: document.getElementById('name').value,
-        apellido: document.getElementById('lastName').value,
-        telefono: document.getElementById('numberCall').value,
-        email: document.getElementById('eMail').value,
-        compañia: document.getElementById('oficina').value,
-        personal: document.getElementById('gente').value,
-        motivo: document.getElementById('reason').value,
-        cita: document.getElementById('cita').value,
-        fotografia: `${foto}`,
-    }
-
-    //console.log(obj)
-    await saveObj(obj);
-    alert("Sea usted bienvenid@ a Torre Insurgentes Sur");
-    //window.location.href = "./index.html";
-
-})
-
-const saveObj = (obj) => {
-    db.collection('visitantes').doc().set(obj);
-    console.log(obj)
-}
-
-//console.log(obj)
 
 
 
