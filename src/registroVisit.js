@@ -45,8 +45,8 @@ const _getUserMedia = (...arguments) =>
  const limpiarSelect = () => {
     for (let x = $listaDeDispositivos.options.length - 1; x >= 0; x--)
         $listaDeDispositivos.remove(x);
-};
-const obtenerDispositivos = () => navigator
+ };
+ const obtenerDispositivos = () => navigator
     .mediaDevices
     .enumerateDevices();
 
@@ -113,7 +113,7 @@ let stream;
                 llenarSelectConDispositivosDisponibles();
 
 //-----Escuchar cuando seleccionen otra opción y entonces llamar a esta función
-                listaDeDispositivos.onchange = () => {
+                $listaDeDispositivos.onchange = () => {
 //-----Detener el stream
                     if (stream) {
                         stream.getTracks().forEach(function(track) {
@@ -143,19 +143,20 @@ let stream;
          context.drawImage(video, 0, 0, canvas.width, canvas.height);
          let dataURL = canvas.toDataURL(); //--------- Esta es la fotografía en base64
          return dataURL;
-     }
+      }
+
      let fotoFb = fotoImg(document.getElementById("canvas"));//------ Se pinta la imagen capturada por la cámara 
+     context.drawImage(video, 0, 0, 250, 120); 
      console.log(fotoFb);
-     context.drawImage(video, 0, 0, 320, 350); 
-     
+    
      //------- Funcionalidad para llamar a firebase y guardarlos 
 
-const db = firebase.firestore();
+     const db = firebase.firestore();
 
-const regVis = document.getElementById('register');
-regVis.addEventListener('click', async (e)=> {
-    e.preventDefault();
-    const obj = {
+      const regVis = document.getElementById('register');
+      regVis.addEventListener('click', async (e)=> {
+        e.preventDefault();
+        const obj = {
 
         //saludo:'hola'
         nombre: document.getElementById('name').value,
@@ -166,32 +167,39 @@ regVis.addEventListener('click', async (e)=> {
         personal: document.getElementById('gente').value,
         motivo: document.getElementById('reason').value,
         cita: document.getElementById('cita').value,
-        fotografia: document.getElementById("canvas").value,
-        checkin: document.getElementById('date').value
-    // checkout: document.getElementById('').value,
-        
+        fotografia: '',
+        checkin: ''
+  //---checkout: document.getElementById('').value,
     }
-    
-    obj.checkin = new Date();
-    obj.fotografia = fotoFb;
-    console.log(obj)
-    await saveObj(obj);
-    alert("Sea usted bienvenid@ a Torre Insurgentes Sur");
-    //window.location.href = "./index.html";
 
-})
+        obj.checkin = new Date();
+        obj.fotografia = fotoFb;
+        console.log(obj)
+        await saveObj(obj);
+        alert("Sea usted bienvenid@ a Torre Insurgentes Sur");
+            //--- window.location.href = "./index.html";
 
-const saveObj = (obj) => {
-    db.collection('visitantes').doc().set(obj);
-    console.log(obj)
+     })
+
+    const saveObj = (obj) => {
+        db.collection('visitantes').doc().set(obj);
+        console.log(obj)
+    }
+  });
+
+  registrarVisit()
+
+  limpiarPersonal = () => {
+      document.getElementById('personal').innerHTML = "";
+  }
+  limpiarMotivos = () => {
+      document.getElementById('razon').innerHTML = "";
+  }
+
+    }, (error) => {
+        console.log("Permiso denegado o error: ", error);
+    });
 }
- });
-
-            }, (error) => {
-                console.log("Permiso denegado o error: ", error);
-                $estado.innerHTML = "No se puede acceder a la cámara, o no diste permiso.";
-            });
-    }
 
     
 //-----Iterar datos de JSON------
@@ -246,14 +254,7 @@ fetch(registrar)
     })
 }
 
-registrarVisit()
 
-limpiarPersonal = () => {
-    document.getElementById('personal').innerHTML = "";
-}
-limpiarMotivos = () => {
-    document.getElementById('razon').innerHTML = "";
-}
 
 
 

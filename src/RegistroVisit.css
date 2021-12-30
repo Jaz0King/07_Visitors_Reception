@@ -114,7 +114,7 @@ label {
   color: rgb(230, 229, 238);
 }
 
-img {
+#imglogo {
   width: 35vh;
 }
 
@@ -125,10 +125,11 @@ video {
 }
 
 canvas {
-  height: 22vh;
-  width: 28vh;
+  height: 32vh;
+  width: 41vh;
   margin: center;
 }
+
 
 button {
   margin-top: 4vh;

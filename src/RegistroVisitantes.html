@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="icon" href="/assets/IMG/logoTIS.jpg" />
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Torre Insurgentes Sur Registro</title>
@@ -14,7 +16,7 @@
         <main>
     <!----------Header donde se encuentra el título----------------------->
             <header id="titulo"><center>
-                <img src="/assets/IMG/logoTIS.jpg" alt="logo">
+                <img src="/assets/IMG/logoTIS.jpg" alt="logo" id='imglogo'>
                 <!-- <h1><center>Torre Insurgentes Sur</center></h1> -->
             </center>
             </header>
@@ -68,12 +70,12 @@
     <!----------Video--------------------------------------------------------------->
                         <video muted="muted" id="video"></video><br>
                          <!----------Boton para tomar la foto-------------------------------------------->
-        <div>
+        <div id="botonBox">
             <select name="listaDeDispositivos" id="listaDeDispositivos" hidden></select>
             <button style="cursor:pointer;" id="boton">Tomar foto</button>
         </div>
-        <div> 
-	                    <canvas id="canvas" ></canvas>
+        <div id="canvasBox"> 
+	                    <canvas id="canvas"></canvas>
                         <br>
                     </div>
                       
